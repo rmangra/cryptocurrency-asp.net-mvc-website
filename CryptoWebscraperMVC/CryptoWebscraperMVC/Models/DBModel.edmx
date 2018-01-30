@@ -41,7 +41,7 @@
           <Property Name="Change" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <EntityContainer Name="CryptoCurrency" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBModel1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CryptoCurrencies" EntityType="Self.CryptoCurrency" />
         </EntityContainer>
       </Schema>
@@ -49,7 +49,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CryptoWebScraperCryptoCurrencyContextModelStoreContainer" CdmEntityContainer="CryptoCurrency">
+        <EntityContainerMapping StorageEntityContainer="CryptoWebScraperCryptoCurrencyContextModelStoreContainer" CdmEntityContainer="DBModel1">
           <EntitySetMapping Name="CryptoCurrencies">
             <EntityTypeMapping TypeName="CryptoWebScraper.CryptoCurrencyContextModel.CryptoCurrency">
               <MappingFragment StoreEntitySet="CryptoCurrencies">

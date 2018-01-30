@@ -13,10 +13,10 @@ namespace CryptoWebscraperMVC.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CryptoCurrency : DbContext
+    public partial class DBModel1 : DbContext
     {
-        public CryptoCurrency()
-            : base("name=CryptoCurrency")
+        public DBModel1()
+            : base("name=DBModel1")
         {
         }
     

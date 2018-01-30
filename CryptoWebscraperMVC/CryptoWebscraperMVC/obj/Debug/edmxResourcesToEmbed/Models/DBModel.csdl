@@ -14,7 +14,7 @@
     <Property Name="Change" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
-  <EntityContainer Name="CryptoCurrency" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DBModel1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CryptoCurrencies" EntityType="Self.CryptoCurrency" />
   </EntityContainer>
 </Schema>
