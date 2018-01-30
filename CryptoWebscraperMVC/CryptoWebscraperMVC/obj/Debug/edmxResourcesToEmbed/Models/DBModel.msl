@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CryptoWebScraperCryptoCurrencyContextModelStoreContainer" CdmEntityContainer="CryptoCurrency">
+    <EntitySetMapping Name="CryptoCurrencies">
+      <EntityTypeMapping TypeName="CryptoWebScraper.CryptoCurrencyContextModel.CryptoCurrency">
+        <MappingFragment StoreEntitySet="CryptoCurrencies">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MarketCap" ColumnName="MarketCap" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Supply" ColumnName="Supply" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CryptoWebScraper.CryptoCurrencyContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CryptoCurrencies">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="MarketCap" Type="nvarchar(max)" />
+    <Property Name="Price" Type="nvarchar(max)" />
+    <Property Name="Volume" Type="nvarchar(max)" />
+    <Property Name="Supply" Type="nvarchar(max)" />
+    <Property Name="Change" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CryptoWebScraperCryptoCurrencyContextModelStoreContainer">
+    <EntitySet Name="CryptoCurrencies" EntityType="Self.CryptoCurrencies" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

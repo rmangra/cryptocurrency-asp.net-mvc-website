@@ -40,3 +40,7 @@ C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscrape
 C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscraperMVC\CryptoWebscraperMVC\obj\Debug\CryptoWebscraperMVC.csproj.CoreCompileInputs.cache
 C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscraperMVC\CryptoWebscraperMVC\obj\Debug\CryptoWebscraperMVC.dll
 C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscraperMVC\CryptoWebscraperMVC\obj\Debug\CryptoWebscraperMVC.pdb
+C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscraperMVC\CryptoWebscraperMVC\bin\EntityFramework.dll
+C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscraperMVC\CryptoWebscraperMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscraperMVC\CryptoWebscraperMVC\bin\EntityFramework.xml
+C:\Users\Richard\source\repos\cryptocurrency-asp.net-mvc-website\CryptoWebscraperMVC\CryptoWebscraperMVC\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "CryptoCurrency List";
+}
+
+<h2>CryptoCurrency List</h2>
+
+
+<table id="cryptocurrencyTable" class="display">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Market Cap</th>
+            <th>Price</th>
+            <th>Volume</th>
+            <th>Supply</th>
+            <th>Change</th>
+            <th>Date-Time</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Market Cap</th>
+            <th>Price</th>
+            <th>Volume</th>
+            <th>Supply</th>
+            <th>Change</th>
+            <th>Date-Time</th>
+        </tr>
+    </tfoot>
+</table>
+
+<link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+@section scripts{
+    @* Normal *@
+    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#cryptocurrencyTable").DataTable(
+                {
+                    "ajax": {
+                        "url": "/CryptoCurrency/GetList",
+                        "type": "GET",
+                        "datatype": "json"
+                    },
+                    "columns": [
+                        { "data": "Name" },
+                        { "data": "MarketCap" },
+                        { "data": "Price" },
+                        { "data": "Volume" },
+                        { "data": "Supply" },
+                        { "data": "Change" },
+                        { "data": "DateTimeStr" }
+                    ]
+
+                });
+
+        });
+    </script>
+
+}
