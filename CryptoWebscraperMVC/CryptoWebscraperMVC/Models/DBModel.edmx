@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CryptoWebScraper.CryptoCurrencyContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CryptoCurrencies">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Item" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="MarketCap" Type="nvarchar(max)" />
+          <Property Name="Price" Type="nvarchar(max)" />
+          <Property Name="Volume" Type="nvarchar(max)" />
+          <Property Name="Supply" Type="nvarchar(max)" />
+          <Property Name="Change" Type="nvarchar(max)" />
+          <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CryptoWebScraperCryptoCurrencyContextModelStoreContainer">
+          <EntitySet Name="CryptoCurrencies" EntityType="Self.CryptoCurrencies" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CryptoWebScraper.CryptoCurrencyContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CryptoCurrency">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Item" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MarketCap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Volume" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Supply" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Change" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="CryptoCurrency" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CryptoCurrencies" EntityType="Self.CryptoCurrency" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CryptoWebScraperCryptoCurrencyContextModelStoreContainer" CdmEntityContainer="CryptoCurrency">
+          <EntitySetMapping Name="CryptoCurrencies">
+            <EntityTypeMapping TypeName="CryptoWebScraper.CryptoCurrencyContextModel.CryptoCurrency">
+              <MappingFragment StoreEntitySet="CryptoCurrencies">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MarketCap" ColumnName="MarketCap" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Supply" ColumnName="Supply" />
+                <ScalarProperty Name="Change" ColumnName="Change" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
